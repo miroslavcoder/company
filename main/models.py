@@ -25,9 +25,7 @@ class About(models.Model):
      about_title2 = models.CharField( max_length=250)
      about_description2 = models.CharField( max_length=250)
      about_photo2 = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None)
-     about_row1 = models.CharField( max_length=250)
-     about_row2 = models.CharField( max_length=250)
-     about_row3 = models.CharField( max_length=250)  
+     
      created_at = models.DateTimeField(auto_now=True, auto_now_add=False)
      updated_at = models.DateTimeField( auto_now=False, auto_now_add=True)
 
@@ -56,3 +54,28 @@ class Service(models.Model):
 
      def __str__(self):
         return self.service_title
+
+
+
+class Parallax(models.Model):
+     parallax_title = models.CharField( max_length=250)
+     parallax_description = models.CharField( max_length=250)
+     parallax_photo = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None)
+
+     parallax_title2_small = models.CharField( max_length=250)
+     
+     parallax_title2 = models.CharField( max_length=250)
+     
+
+     parallax_description2 = models.CharField( max_length=250)
+     parallax_photo2 = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None)
+
+     parallax_row1 = models.CharField( max_length=250)
+     parallax_row2 = models.CharField( max_length=250)
+     parallax_row3 = models.CharField( max_length=250)  
+
+     created_at = models.DateTimeField(auto_now=True, auto_now_add=False)
+     updated_at = models.DateTimeField( auto_now=False, auto_now_add=True)
+
+     def __str__(self):
+        return self.parallax_title
